@@ -20,14 +20,17 @@ function chocolate() {
     total +=300;
     document.getElementById("cakechoco").style.display="block";
     document.getElementById("1").innerHTML = "Chocolate----------300";
-    total1();
   }
   else
   {
     total -=300;
     document.getElementById("cakechoco").style.display="none";
     document.getElementById("1").innerHTML = "";
-    total1();
+    if(document.getElementById("candle").style.display=="block")
+    {
+      document.getElementById("candle").style.display="none";
+      document.getElementById("total").style.display="none";
+    }
   }
     
 }
@@ -37,14 +40,17 @@ function strawberry() {
     total +=100;
     document.getElementById("cakestraw").style.display="block";
     document.getElementById("2").innerHTML = "Strawberry---------100";
-    total1();
   }
   else
   {
     total -=100;
     document.getElementById("cakestraw").style.display="none";
     document.getElementById("2").innerHTML = "";
-    total1();
+    if(document.getElementById("candle").style.display=="block")
+    {
+      document.getElementById("candle").style.display="none";
+      document.getElementById("total").style.display="none";
+    }
   }
   }
   function butterscotch() {
@@ -53,14 +59,17 @@ function strawberry() {
       total +=200;
       document.getElementById("cakescotch").style.display="block";
       document.getElementById("3").innerHTML = "Butterscotch-------200";
-      total1();
     }
     else
     {
       total -=200;
       document.getElementById("cakescotch").style.display="none";
       document.getElementById("3").innerHTML = "";
-      total1();
+      if(document.getElementById("candle").style.display=="block")
+      {
+        document.getElementById("candle").style.display="none";
+        document.getElementById("total").style.display="none";
+      }
     }
     
   }
@@ -70,14 +79,17 @@ function strawberry() {
       total +=250;
       document.getElementById("cakevanilla").style.display="block";
       document.getElementById("4").innerHTML = "Vanilla-------------250";
-      total1();
     }
     else
     {
       total -=250;
       document.getElementById("cakevanilla").style.display="none";
       document.getElementById("4").innerHTML = "";
-      total1();
+      if(document.getElementById("candle").style.display=="block")
+      {
+        document.getElementById("candle").style.display="none";
+        document.getElementById("total").style.display="none";
+      }
     }
   }
   function redvelvet() {
@@ -86,27 +98,22 @@ function strawberry() {
       total +=350;
       document.getElementById("cakered").style.display="block";
       document.getElementById("5").innerHTML = "RedVelvet---------350";
-      total1();
     }
     else
     {
       total -=350;
       document.getElementById("cakered").style.display="none";
       document.getElementById("5").innerHTML = "";
-      total1();
+      if(document.getElementById("candle").style.display=="block")
+      {
+        document.getElementById("candle").style.display="none";
+        document.getElementById("total").style.display="none";
+      }
     }
     
   }
   function total1() {
-    if(total==0)
-    {
-      document.getElementById("candle").style.display="none";
-      document.getElementById("total").innerHTML = "Total--------- " +total;
-    }
-    else
-    {
       document.getElementById("candle").style.display="block";
+      document.getElementById("total").style.display="block";
       document.getElementById("total").innerHTML = "Total--------- " +total;
-    }
-    
   }
